@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/precio"
-        android:inputType="textPersonName" />
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/txtcapacidad"
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/cantidad"
-        android:inputType="textPersonName" />
+        android:inputType="number" />
 
     <Spinner
         android:id="@+id/cbxcolor"
