@@ -16,7 +16,7 @@
     <string name="nokia">Nokia</string>
     <string name="samsung">Samsung</string>
     <string name="huawei">Huawei</string>
-
+    <string name="apple">Apple</string>
     <array name="opciones">
         <item>@string/crear</item>
         <item>@string/listar</item>
@@ -27,6 +27,7 @@
         <item>@string/nokia</item>
         <item>@string/samsung</item>
         <item>@string/huawei</item>
+        <item>@string/apple</item>
     </array>
 
     <array name="sistema">
@@ -58,5 +59,7 @@
     <string name="reporte4">Reporte Taller No. 4</string>
     <string name="reporte5">Reporte Taller No. 5</string>
     <string name="reportes">Reportes</string>
+    <string name="generar">Generar</string>
+    <string name="error">Ingrese Precio y Capacidad</string>
 
 </resources>

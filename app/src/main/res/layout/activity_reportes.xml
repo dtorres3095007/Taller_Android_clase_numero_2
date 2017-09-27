@@ -20,6 +20,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.03" />
 
+        <Button
+            android:id="@+id/button"
+            style="@style/generar"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:onClick="Generar_Reporte"
+            android:text="@string/generar"
+            android:textAlignment="center" />
+
         <TextView
             android:id="@+id/textView6"
             android:layout_width="match_parent"

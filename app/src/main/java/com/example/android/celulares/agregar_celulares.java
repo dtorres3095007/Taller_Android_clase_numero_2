@@ -46,15 +46,22 @@ public class agregar_celulares extends AppCompatActivity {
     }
 
     public void Guardar(View v){
-        int sel_marca = marca_spiner.getSelectedItemPosition();
-        int sel_sistema = sistema_spiner.getSelectedItemPosition();
-        int sel_color = color_spiner.getSelectedItemPosition();
-        double precio_sele = Double.parseDouble(precio.getText().toString());
-        double capacidad_Sele = Double.parseDouble(capacidad.getText().toString());
-        celulares c = new celulares(precio_sele,capacidad_Sele,sel_marca,sel_color,sel_sistema);
-        c.Guardar();
 
-        Toast.makeText(this,resources.getString(R.string.mensaje_exitoso),Toast.LENGTH_SHORT).show();
+        if (precio.getText().toString().length()==0 || capacidad.getText().toString().length()==0){
+            Toast.makeText(this,resources.getString(R.string.error),Toast.LENGTH_SHORT).show();
+        }else {
 
+
+            int sel_marca = marca_spiner.getSelectedItemPosition();
+            int sel_sistema = sistema_spiner.getSelectedItemPosition();
+            int sel_color = color_spiner.getSelectedItemPosition();
+
+            double precio_sele = Double.parseDouble(precio.getText().toString());
+            double capacidad_Sele = Double.parseDouble(capacidad.getText().toString());
+            celulares c = new celulares(precio_sele, capacidad_Sele, sel_marca, sel_color, sel_sistema);
+            c.Guardar();
+
+            Toast.makeText(this, resources.getString(R.string.mensaje_exitoso), Toast.LENGTH_SHORT).show();
+        }
     }
 }

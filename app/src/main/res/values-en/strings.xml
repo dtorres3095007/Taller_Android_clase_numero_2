@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cell Phones</string>
+    <string name="agregar">Add Cell Phones</string>
+    <string name="android">Android</string>
+    <string name="apple">Apple</string>
+    <string name="azul">Blue</string>
+    <string name="blanco">White</string>
+    <string name="cantidad">Capacity</string>
+    <string name="crear">Create</string>
+    <string name="color">Color</string>
+    <string name="error">Enter Price And Capacity</string>
+    <string name="generar">Generate</string>
+    <string name="guardar">Add</string>
+    <string name="huawei">Huawei</string>
+    <string name="ios">IOS</string>
+    <string name="limpiar">Clear</string>
+    <string name="marca">Brand</string>
+    <string name="mensaje_exitoso">Phone add</string>
+    <string name="negro">Black</string>
+    <string name="no">No.</string>
+    <string name="nokia">Nokia</string>
+    <string name="precio">Price</string>
+    <string name="reporte1">workshop report no. 1</string>
+    <string name="reporte4">workshop report no. 4</string>
+    <string name="reporte5">workshop report no. 5</string>
+    <string name="reportes">report</string>
+    <string name="resultado">result</string>
+    <string name="listar">to list</string>
+    <string name="samsung">Samsung</string>
+    <string name="sistema">System</string>
+</resources>
