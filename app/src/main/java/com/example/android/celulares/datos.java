@@ -59,4 +59,9 @@ public class datos {
 
         return  (suma/sw);
     }
+
+    public static boolean ValidarEnteros(double cap, double pre){
+        if (cap ==0 || pre ==0)return false;
+        return true;
+    }
 }

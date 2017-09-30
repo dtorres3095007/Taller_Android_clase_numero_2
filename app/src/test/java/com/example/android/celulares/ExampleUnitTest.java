@@ -97,5 +97,21 @@ public class ExampleUnitTest {
         assertNotEquals(80,datos.celulares_precio_nokia(cel),0);
 
     }
+    @Test
+    public void Probando_validar_mayores_cero_verdadero_correcto(){
+        assertEquals(true,datos.ValidarEnteros(4,5));
+    }
+    @Test
+    public void Probando_validar_mayores_cero_falso_correcto(){
+        assertEquals(false,datos.ValidarEnteros(0,5));
+    }
+    @Test
+    public void Probando_validar_mayores_cero_verdadero_incorrecto(){
+        assertNotEquals(false,datos.ValidarEnteros(4,5));
+    }
+    @Test
+    public void Probando_validar_mayores_cero_false_incorrecto(){
+        assertNotEquals(true,datos.ValidarEnteros(5,0));
+    }
 
 }

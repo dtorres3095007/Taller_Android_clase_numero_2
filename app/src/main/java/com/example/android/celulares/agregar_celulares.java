@@ -58,10 +58,13 @@ public class agregar_celulares extends AppCompatActivity {
 
             double precio_sele = Double.parseDouble(precio.getText().toString());
             double capacidad_Sele = Double.parseDouble(capacidad.getText().toString());
-            celulares c = new celulares(precio_sele, capacidad_Sele, sel_marca, sel_color, sel_sistema);
-            c.Guardar();
-
-            Toast.makeText(this, resources.getString(R.string.mensaje_exitoso), Toast.LENGTH_SHORT).show();
+            if (datos.ValidarEnteros(capacidad_Sele,precio_sele) == false){
+                Toast.makeText(this,resources.getString(R.string.error2),Toast.LENGTH_SHORT).show();
+            }else {
+                celulares c = new celulares(precio_sele, capacidad_Sele, sel_marca, sel_color, sel_sistema);
+                c.Guardar();
+                Toast.makeText(this, resources.getString(R.string.mensaje_exitoso), Toast.LENGTH_SHORT).show();
+            }
         }
     }
 }

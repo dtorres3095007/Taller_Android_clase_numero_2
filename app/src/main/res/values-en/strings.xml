@@ -29,4 +29,5 @@
     <string name="listar">to list</string>
     <string name="samsung">Samsung</string>
     <string name="sistema">System</string>
+    <string name="error2">Enter Prince And Capacity greater than Zero</string>
 </resources>
