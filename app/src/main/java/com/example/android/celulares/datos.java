@@ -49,7 +49,9 @@ public class datos {
     {
         double suma = 0;
         int sw =0 ;
-
+if (cel.size()==0){
+    return 0;
+}
         for(int i = 0 ; i< cel.size();i++){
             if (cel.get(i).getMarca()==0){
                 suma = suma + cel.get(i).getPrecio();
