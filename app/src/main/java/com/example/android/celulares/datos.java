@@ -18,23 +18,21 @@ public class datos {
         return  cel;
     }
 
-    public static String Obtener_precio_capacidad()
+    public static ArrayList<celulares> Obtener_precio_capacidad(ArrayList<celulares> cel)
     {
-        int sw =0 ;
-String resultado = "";
+
+         ArrayList<celulares> resultado = new ArrayList<>();
         for(int i = 0 ; i< cel.size();i++){
             if (cel.get(i).getMarca()==1 && cel.get(i).getColor()==0 && cel.get(i).getSistema()==0){
-                resultado = resultado +  "celular No." + (i+1) + ": \nPrecio = " + cel.get(i).getPrecio() + ", \nCapacidad = " + cel.get(i).getCapacidad() + "\n\n";
-            sw = 1;
+                 resultado.add(cel.get(i));
+
             }
         }
-        if (sw ==0){
-            return "Sin Resultados";
-        }
+
         return  resultado;
     }
 
-    public static String Obtener_marca_apple()
+    public static int Obtener_marca_apple(ArrayList<celulares> cel)
     {
         int sw =0 ;
 
@@ -44,10 +42,10 @@ String resultado = "";
             }
         }
 
-        return  "" + sw;
+        return   sw;
     }
 
-    public static String celulares_precio_nokia()
+    public static double celulares_precio_nokia(ArrayList<celulares> cel)
     {
         double suma = 0;
         int sw =0 ;
@@ -58,9 +56,7 @@ String resultado = "";
                 sw = sw+1;
             }
         }
-if (sw<1){
-    return "Sin celulares Nokia";
-}
-        return  "" + (suma/sw);
+
+        return  (suma/sw);
     }
 }

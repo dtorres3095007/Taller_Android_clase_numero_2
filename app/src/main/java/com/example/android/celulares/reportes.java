@@ -8,16 +8,20 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import java.util.ArrayList;
+
 public class reportes extends AppCompatActivity {
     private String reporte[];
     private EditText res;
     private Resources resources;
+    private ArrayList<celulares> celulares;
     private Spinner reporte_spinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reportes);
         resources=this.getResources();
+        celulares = datos.Obtener();
         reporte_spinner=(Spinner) findViewById(R.id.cbxreporte);
         reporte=resources.getStringArray(R.array.reporte);
         ArrayAdapter<String> adapter_reporte = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,reporte);
@@ -27,11 +31,17 @@ public class reportes extends AppCompatActivity {
     public void Generar_Reporte(View v){
         int sel_reporte = reporte_spinner.getSelectedItemPosition();
         if (sel_reporte==0){
-      res.setText(datos.Obtener_precio_capacidad());
+            ArrayList<celulares> cel = datos.Obtener_precio_capacidad(celulares);
+            String resultado = "";
+            for (int i = 0; i < cel.size() ; i++) {
+                resultado = resultado +  "celular No." + (i+1) + ": \nPrecio = " + cel.get(i).getPrecio() + ", \nCapacidad = " + cel.get(i).getCapacidad() + "\n\n";
+
+            }
+      res.setText(resultado);
         }else if(sel_reporte==1){
-            res.setText(datos.Obtener_marca_apple());
+            res.setText(""+datos.Obtener_marca_apple(celulares));
         }else{
-            res.setText(datos.celulares_precio_nokia());
+            res.setText(""+datos.celulares_precio_nokia(celulares));
         }
     }
 
